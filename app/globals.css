@@ -4,7 +4,16 @@
 
 :root {
   color-scheme: dark;
+  --vg-accent: #fbbf24;
+  --vg-accent-soft: #fde68a;
+  --vg-accent-deep: #f59e0b;
 }
+
+/* Акценты по темам */
+body[data-theme="sunflowers"] { --vg-accent: #facc15; --vg-accent-soft: #fef08a; --vg-accent-deep: #ca8a04; }
+body[data-theme="olives"]     { --vg-accent: #a3e635; --vg-accent-soft: #d9f99d; --vg-accent-deep: #65a30d; }
+body[data-theme="cafe"]       { --vg-accent: #fbbf24; --vg-accent-soft: #fde68a; --vg-accent-deep: #f59e0b; }
+body[data-theme="iris"]       { --vg-accent: #c4b5fd; --vg-accent-soft: #ede9fe; --vg-accent-deep: #8b5cf6; }
 
 html, body { height: 100%; }
 
@@ -88,7 +97,7 @@ main, aside, nav { position: relative; z-index: 1; }
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 900;
   letter-spacing: -0.01em;
-  color: #fde68a;
+  color: var(--vg-accent-soft);
   text-shadow:
     0 0 18px rgba(251,191,36,0.45),
     0 0 36px rgba(245,158,11,0.25),
@@ -153,9 +162,9 @@ main, aside, nav { position: relative; z-index: 1; }
 }
 .vg-tab:hover { border-color: rgba(251,191,36,0.5); }
 .vg-tab.active {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, var(--vg-accent), var(--vg-accent-deep));
   color: #0a1929;
-  border-color: #fbbf24;
+  border-color: var(--vg-accent);
   box-shadow: 0 0 16px rgba(251,191,36,0.4);
 }
 
@@ -181,7 +190,7 @@ main, aside, nav { position: relative; z-index: 1; }
 
 .vg-btn {
   display: inline-flex; align-items: center; gap: 0.5rem; justify-content: center;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  background: linear-gradient(135deg, var(--vg-accent) 0%, var(--vg-accent-deep) 100%);
   color: #0a1929;
   font-weight: 700;
   padding: 0.5rem 1rem;
@@ -239,8 +248,8 @@ main, aside, nav { position: relative; z-index: 1; }
 .vg-nav-item:hover { background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.2); }
 .vg-nav-item.active {
   background: linear-gradient(135deg, rgba(251,191,36,0.2), rgba(245,158,11,0.1));
-  border-color: rgba(251,191,36,0.5);
-  color: #fde68a;
+  border-color: var(--vg-accent);
+  color: var(--vg-accent-soft);
   box-shadow: inset 0 0 12px rgba(251,191,36,0.15);
 }
 
@@ -269,9 +278,9 @@ main, aside, nav { position: relative; z-index: 1; }
 }
 .vg-chip:hover { border-color: rgba(251,191,36,0.5); }
 .vg-chip.active {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, var(--vg-accent), var(--vg-accent-deep));
   color: #0a1929;
-  border-color: #fbbf24;
+  border-color: var(--vg-accent);
 }
 
 /* Помодоро */
@@ -289,7 +298,7 @@ main, aside, nav { position: relative; z-index: 1; }
 .vg-timer-time {
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem; font-weight: 900;
-  color: #fde68a;
+  color: var(--vg-accent-soft);
   text-shadow: 0 0 20px rgba(251,191,36,0.5);
   letter-spacing: -0.02em;
 }

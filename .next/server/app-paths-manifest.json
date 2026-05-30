@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/focus/page": "app/focus/page.js",
+  "/goals/page": "app/goals/page.js",
+  "/notes/page": "app/notes/page.js",
+  "/inspire/page": "app/inspire/page.js",
+  "/schedule/page": "app/schedule/page.js",
+  "/tasks/page": "app/tasks/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/page": "app/page.js"
+}
